@@ -4,10 +4,9 @@
   background-repeat: no-repeat;
   background-position:center center;
   background-size: cover;
-  height: 40em;  
+  height: 42em;  
 }
 
-span {
-  font-size: 3em;
-  color: #ffffff;
+a {
+  color: #ffffff
 }
