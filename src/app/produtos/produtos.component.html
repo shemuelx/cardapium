@@ -1,0 +1,44 @@
+
+<!-- Formulario dos produtos  -->
+
+<form [formGroup]="produtosForm" (ngSubmit)="onSubmit()">
+
+  <label>Nome
+    
+    <input type="text" 
+           formControlName="nome" required>    
+
+  </label>
+
+  <label>Sabor
+
+    <input type="text"  
+           formControlName="sabor" required>
+
+  </label>
+  
+  <label>Quantidade
+    
+    <input type="text"  
+           formControlName="quantidade" required>
+
+  </label>
+
+  <label>ID
+    
+    <input type="text" 
+           formControlName="id" required>
+  
+  </label>
+  
+  <label>Data
+    
+    <input type="text" 
+           formControlName="data" required>    
+
+  </label>
+  
+  <button type="submit">Confirma</button>
+
+</form>
+
