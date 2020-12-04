@@ -13,11 +13,11 @@ export class ClientesComponent implements OnInit {
 
   clientesForm = this.fb.group ({
   
-    nome: ['Ze do Caroço', Validators.required],
-    email: ['zezito@caroço.com.br', Validators.email, Validators.required],
-    cpf: ['78956412389', Validators.required],
-    telefone: ['21999888777', Validators.required],
-    cep: ['87654321', Validators.required]
+    nome: ['', Validators.required],
+    email: ['', Validators.email],
+    cpf: ['', Validators.required],
+    telefone: ['', Validators.required],
+    cep: ['', Validators.required]
 
   })
 

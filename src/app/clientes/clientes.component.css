@@ -6,6 +6,10 @@
     margin-left: 3em;
   }
   
+  p {
+    margin-top: 1em;
+    font-size: 1.5em;
+  }
   label {
     display: block;
     width: 6em;
