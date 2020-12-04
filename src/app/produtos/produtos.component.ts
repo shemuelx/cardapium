@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
-
+import { FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-produtos',
@@ -11,14 +11,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 
 export class ProdutosComponent {
 
-  produtosForm = new FormGroup ({
+  produtosForm = this.fb.group({
   
-    id: new FormControl(''),
-    nome: new FormControl(''),
-    sabor: new FormControl(''),
-    quantidade: new FormControl(''),
-    data: new FormControl('')
-
+    id: ['4321',Validators.required],
+    nome: ['coxinha', Validators.required],
+    sabor: ['frango', Validators.required],
+    quantidade: ['11', Validators.required],
+    data: ['01-12-2020', Validators.required]
   })
 
   onSubmit() {
@@ -26,9 +25,10 @@ export class ProdutosComponent {
     alert(this.produtosForm.value);
   }
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    
   }
 
 }
