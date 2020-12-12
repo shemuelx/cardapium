@@ -3,9 +3,11 @@
     display: flex;
     flex-direction: column;
     padding-top: 24px;
-    margin-left: 3em;
+    margin-left: 2em;
   }
-  
+  form {
+    margin-left: 10em;
+  }
   p {
     margin-top: 1em;
     font-size: 1.5em;
@@ -41,9 +43,3 @@
     cursor: auto;
   }
   
-  
-  /*
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at https://angular.io/license
-  */

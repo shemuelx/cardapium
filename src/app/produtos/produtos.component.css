@@ -1,48 +1,44 @@
 
 :host {
-    display: flex;
-    flex-direction: column;
-    padding-top: 24px;
-    margin-left: 3em;
-  }
-  
-  label {
-    display: block;
-    width: 6em;
-    margin: .5em 0;
-    color: #000000;
-    font-weight: bold;
-  }
-  form {
-    font-family: inherit;
-    font-size: 1em;
-  }
-  input {
-    height: 2em;
-    font-size: 1em;
-    padding-left: .4em;
-  }
-  
-  button {    
-    background-color: #eee;    
-    padding: 10px 10px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #cfd8dc;
-  }
-  
-  button:disabled {
-    background-color: #eee;
-    color: #ccc;
-    cursor: auto;
-  }
-  
-  
-  /*
-  Copyright Google LLC. All Rights Reserved.
-  Use of this source code is governed by an MIT-style license that
-  can be found in the LICENSE file at https://angular.io/license
-  */
+  display: flex;
+  flex-direction: column;
+  padding-top: 24px;
+  margin-left: 3em;
+}
+form {
+  margin-left: 10em;
+}
+p {
+  margin-top: 1em;
+  font-size: 1.5em;
+}
+label {
+  display: block;
+  width: 6em;
+  margin: .5em 0;
+  color: #000000;
+  font-weight: bold;
+}
+
+input {
+  height: 2em;
+  font-size: 1em;
+  padding-left: .4em;
+}
+
+button {    
+  background-color: #eee;    
+  padding: 10px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}

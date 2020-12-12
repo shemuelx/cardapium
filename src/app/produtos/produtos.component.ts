@@ -17,7 +17,8 @@ export class ProdutosComponent {
     nome: ['coxinha', Validators.required],
     sabor: ['frango', Validators.required],
     quantidade: ['11', Validators.required],
-    data: ['01-12-2020', Validators.required]
+    datavalidade: ['01-12-2020', Validators.required],
+    dataentrada: ['01-12-2020', Validators.required]
   })
 
   onSubmit() {
