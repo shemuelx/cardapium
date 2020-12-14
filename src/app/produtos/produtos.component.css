@@ -1,44 +1,34 @@
+/* produtosComponent's private CSS styles */
 
-:host {
-  display: flex;
-  flex-direction: column;
-  padding-top: 24px;
-  margin-left: 3em;
+.produtos {
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 30em;
 }
-form {
-  margin-left: 10em;
-}
-p {
-  margin-top: 1em;
-  font-size: 1.5em;
-}
-label {
-  display: block;
-  width: 6em;
-  margin: .5em 0;
-  color: #000000;
-  font-weight: bold;
-}
-
-input {
-  height: 2em;
-  font-size: 1em;
-  padding-left: .4em;
-}
-
-button {    
-  background-color: #eee;    
-  padding: 10px 10px;
-  border-radius: 4px;
+.produtos li {
   cursor: pointer;
+  position: relative;
+  left: 0;
+  background-color: #EEE;
+  margin: .5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
 }
-
-button:hover {
-  background-color: #cfd8dc;
+.produtos li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
 }
-
-button:disabled {
-  background-color: #eee;
-  color: #ccc;
-  cursor: auto;
+.produtos li.selected {
+  background-color: #CFD8DC;
+  color: white;
+}
+.produtos li.selected:hover {
+  background-color: #BBD8DC;
+  color: white;
+}
+.botao {
+  margin-left: 1em;
 }

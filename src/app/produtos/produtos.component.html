@@ -1,42 +1,43 @@
 
 <!-- Formulario dos produtos  -->
+<h2>Produtos</h2>
 
-<form [formGroup]="produtosForm" (ngSubmit)="onSubmit()">
+<ul class="produtos">
+  <li *ngFor="let produto of produtos"  
+    [class.selected]="produto === selectedProduto"
+    (click)="onSelect(produto)">    
+    <span class="botao">Id: {{ produto.id }}</span>
+    <span class="botao">Nome: {{ produto.nome }}</span>    
+  </li>
+</ul>
 
-  <label>
-    Nome    
-    <input type="text" formControlName="nome" required>
-  </label>
+<div *ngIf="selectedProduto">
 
-  <label>
-    Sabor
-    <input type="text" formControlName="sabor" required>
-  </label>
+  <h2>{{selectedProduto.name | uppercase}} Detalhes</h2>
+  <div><span>Id: </span>{{ selectedProduto.id }}</div>
+  <div><span>Data Validade </span>{{ selectedProduto.datavalidade }}</div>
   
-  <label>
-    Quantidade
-    <input type="text" formControlName="quantidade" required>
-  </label>
+  <div>
+    <label>
+      Nome    
+      <input [(ngModel)]="selectedProduto.nome" placeholder="nome">
+    </label>
+    <label>
+      Sabor
+      <input [(ngModel)]="selectedProduto.sabor" placeholder="sabor">
+    </label>
+    <label>
+      Quantidade
+      <input [(ngModel)]="selectedProduto.quantidade" placeholder="quantidade">
+    </label>
+    <label>
+      Data Validade    
+      <input [(ngModel)]="selectedProduto.datavalidade" placeholder="01/12/2022">    
+    </label>
+    <label>
+      Data Entrada    
+      <input [(ngModel)]="selectedProduto.dataentrada" placeholder="01/12/2020">    
+    </label>
+  </div>
 
-  <label>
-    ID    
-    <input type="text" formControlName="id" required>  
-  </label>
-  
-  <label>
-    Data Validade    
-    <input type="text" formControlName="datavalidade" required>    
-  </label>
-  
-  <label>
-    Data Entrada    
-    <input type="text" formControlName="dataentrada" required>    
-  </label>
-
-  <button type="submit">Confirma</button>
-
-  <p>
-    Form Value: {{ produtosForm.value | json }}
-  </p>
-</form>
-
+</div>

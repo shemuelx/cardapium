@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
-import { Validators } from '@angular/forms';
+import { PRODUTOS } from '../mock-produtos';
+import { Produto } from '../produto';
+
 
 @Component({
   selector: 'app-produtos',
@@ -9,27 +10,18 @@ import { Validators } from '@angular/forms';
 })
 
 
-export class ProdutosComponent {
-
-  produtosForm = this.fb.group({
+export class ProdutosComponent implements OnInit {
   
-    id: ['4321',Validators.required],
-    nome: ['coxinha', Validators.required],
-    sabor: ['frango', Validators.required],
-    quantidade: ['11', Validators.required],
-    datavalidade: ['01-12-2020', Validators.required],
-    dataentrada: ['01-12-2020', Validators.required]
-  })
+  produtos = PRODUTOS;
+  selectedProduto: Produto;
 
-  onSubmit() {
-   
-    alert(this.produtosForm.value);
-  }
-
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
   ngOnInit(): void {
-    
+  }
+
+  onSelect(produto: Produto): void {
+    this.selectedProduto = produto;
   }
 
 }
