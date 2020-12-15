@@ -7,6 +7,23 @@
   justify-content:space-evenly;
   align-items: center;
 }
+.form {
+  margin: 5em auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+.nome {  
+  margin-right: 1em;
+  color: #000000;
+  font-weight: bold;
+}
+input {
+  height: 2em;
+  width: 15em;
+  font-size: 1em;
+  padding-left: .4em;
+}
 li {
   margin: 1em 2em;
   padding: .5em .8em;
@@ -32,8 +49,25 @@ a:hover {
 a.active {
   color: #039be5;
 }
-.id {
-  
+button {
+  background-color: #eee;    
+  padding: 8px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1em;
+}
+
+button:hover {
+  background-color: #cfd8dc;
+}
+button:disabled {
+  background-color: #eee;
+  color: #ccc;
+  cursor: auto;
+}
+button.delete {
+  background-color: snow;
+  color: red;
 }
 .nome {
   margin-left: 1.25em;

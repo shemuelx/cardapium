@@ -26,13 +26,17 @@ export class ProdutoDetalheComponent implements OnInit {
   
   getProduto(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.produtosService.getProdutos(id)
+    this.produtosService.getProduto(id)
         .subscribe(produto => this.produto = produto);
   }
   goBack(): void {
     this.location.back();
   }
-  
+  save(): void {
+    this.produtosService.updateProduto(this.produto)
+      .subscribe(() => this.goBack());
+  }
+
 };
 
 
