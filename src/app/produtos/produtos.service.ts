@@ -16,7 +16,7 @@ export class ProdutosService {
     private http: HttpClient,
     private mensagensService: MensagensService ) { } 
 
-    private produtosUrl = 'https://run.mocky.io/v3/01b7537d-d18d-4fcd-af7d-a1e9ecc46e80';  // URL to web api
+    private produtosUrl = 'https://run.mocky.io/v3/53dde1ba-24a9-4166-8cbf-1166a00d33aa';  // URL to web api
 
     httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })

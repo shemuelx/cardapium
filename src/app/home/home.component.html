@@ -3,5 +3,5 @@
 <h3>Produtos Frequentes:</h3>
 <div class="melhores">
   <a *ngFor="let produto of produtos"
-     routerLink="/produto/{{produto.id}}">{{ produto.nome | titlecase }}</a>
+     routerLink="produto/{{produto.id}}">{{ produto.nome | titlecase }}</a>
 </div>
