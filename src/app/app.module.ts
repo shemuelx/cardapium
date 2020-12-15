@@ -8,13 +8,17 @@ import { FormsModule } from '@angular/forms';
 import { ProdutosComponent } from './produtos/produtos.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { HomeComponent } from './home/home.component';
+import { ProdutoDetalheComponent } from './produto-detalhe/produto-detalhe.component';
+import { MensagensComponent } from './mensagens/mensagens.component';
 
 @NgModule({
   declarations: [
     AppComponent,    
     ProdutosComponent,
     ClientesComponent,
-    HomeComponent    
+    HomeComponent,
+    ProdutoDetalheComponent,
+    MensagensComponent    
   ],
   imports: [    
     AppRoutingModule,        

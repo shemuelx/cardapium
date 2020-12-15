@@ -1,22 +1,22 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
+import { Observable, of } from 'rxjs';
+import { MensagensService } from '../mensagens.service';
 
 import { Produto } from '../produto'
+import { PRODUTOS } from '../mock-produtos';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ProdutosService {  
 
-  constructor( private http: HttpClient) { }
+export class ProdutosService {   
 
-  private produtosURL = 'api/produtos';  // URL to web api
+  constructor(private mensagensService: MensagensService ) { }  
 
   getProdutos(): Observable<Produto[]> {
-
-    return this.http.get<Produto[]>(this.produtosURL)    
-
+    // mensangensService retorna uma string após fetch
+    this.mensagensService.add(`Produtos Service: fetched produtos`)
+    return of(PRODUTOS)
   }
 }

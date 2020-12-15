@@ -1,0 +1,32 @@
+
+<div *ngIf="produto">
+
+  <h2>{{produto.name | uppercase}} Detalhes</h2>
+  <div><span>Id: </span>{{ produto.id }}</div>
+  <div><span>Data Validade </span>{{ produto.datavalidade }}</div>
+  
+  <div>
+    <label>
+      Nome    
+      <input [(ngModel)]="produto.nome" placeholder="nome">
+    </label>
+    <label>
+      Sabor
+      <input [(ngModel)]="produto.sabor" placeholder="sabor">
+    </label>
+    <label>
+      Quantidade
+      <input [(ngModel)]="produto.quantidade" placeholder="quantidade">
+    </label>
+    <label>
+      Data Validade    
+      <input [(ngModel)]="produto.datavalidade" placeholder="01/12/2022">    
+    </label>
+    <label>
+      Data Entrada    
+      <input [(ngModel)]="produto.dataentrada" placeholder="01/12/2020">    
+    </label>
+  </div>
+
+</div>
+
