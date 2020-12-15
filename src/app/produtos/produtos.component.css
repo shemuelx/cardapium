@@ -1,34 +1,40 @@
-/* produtosComponent's private CSS styles */
-
 .produtos {
-  margin: 0 0 2em 0;
-  list-style-type: none;
-  padding: 0;
-  width: 30em;
+  margin: 5em auto;
+  list-style-type: none;  
+  width: 90%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content:space-evenly;
+  align-items: center;
 }
-.produtos li {
-  cursor: pointer;
-  position: relative;
-  left: 0;
-  background-color: #EEE;
-  margin: .5em;
-  padding: .3em 0;
-  height: 1.6em;
+li {
+  margin: 1em 2em;
+  padding: .5em .8em;
+  width: 20em;
+  height: 3em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #eee;
   border-radius: 4px;
 }
-.produtos li:hover {
-  color: #607D8B;
-  background-color: #DDD;
-  left: .1em;
+a {  
+  text-decoration: none;   
+  border-radius: 4px;
+  font-size: 1.5em;  
 }
-.produtos li.selected {
-  background-color: #CFD8DC;
-  color: white;
+a:visited, a:link {
+  color: #334953;
 }
-.produtos li.selected:hover {
-  background-color: #BBD8DC;
-  color: white;
+a:hover {
+  color: #039be5;  
 }
-.botao {
-  margin-left: 1em;
+a.active {
+  color: #039be5;
+}
+.id {
+  
+}
+.nome {
+  margin-left: 1.25em;
 }

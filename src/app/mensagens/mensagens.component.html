@@ -1,8 +1,8 @@
-<div *ngIf="mensagensService.mensagens.length">
-
-  <h2>Mensagen</h2>
+<div *ngIf="mensagensService.mensagens.length" class="container">
+  <span>Mensagens do sistema</span>
   <button class="clear"
-          (click)="mensagensService.clear()">clear</button>
-  <div *ngFor='let mensagen of mensagensService.mensagens'> {{ mensagen }} </div>
-
+          (click)="mensagensService.clear()">Limpar</button>
+  <div *ngFor='let mensagen of mensagensService.mensagens'>
+    <span class="mensagens">{{ mensagen }}</span>
+  </div>
 </div>

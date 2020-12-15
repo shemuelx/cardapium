@@ -13,26 +13,17 @@ import { Produto } from '../produto';
 
 export class ProdutosComponent implements OnInit { 
   
-  produtos: Produto[];
-  selectedProduto: Produto;
+  produtos: Produto[];  
 
-  constructor(private produtoService: ProdutosService, 
-              private mensagensService: MensagensService) { }
+  constructor(private produtoService: ProdutosService) { }
 
-  getProdutos(): void {    
-    this.produtoService.getProdutos()
-        .subscribe(produtos => this.produtos = produtos);
-  }  
-  
   ngOnInit(): void {
     this.getProdutos();
   }
-  
-  onSelect(produto: Produto): void {
-    this.selectedProduto = produto;
-    this.mensagensService.add(`ProdutosComponent: 
-                               Id do Produto selecionado ${produto.id}`);
-  }
 
-}
+  getProdutos(): void {    
+    this.produtoService.getProduto()
+        .subscribe(produtos => this.produtos = produtos);
+  }  
+};
 

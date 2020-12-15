@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+
 import { Observable, of } from 'rxjs';
 import { MensagensService } from '../mensagens.service';
 
@@ -12,11 +12,17 @@ import { PRODUTOS } from '../mock-produtos';
 
 export class ProdutosService {   
 
-  constructor(private mensagensService: MensagensService ) { }  
+  constructor(private mensagensService: MensagensService ) { } 
+  
+  getProduto(): Observable<Produto[]> {
+    // TODO: envia mensagen _after_ fetching produtos
+    this.mensagensService.add('HeroService: fetched heroes');
+    return of(PRODUTOS);
+  }
 
-  getProdutos(): Observable<Produto[]> {
+  getProdutos(id: number): Observable<Produto> {
     // mensangensService retorna uma string após fetch
-    this.mensagensService.add(`Produtos Service: fetched produtos`)
-    return of(PRODUTOS)
+    this.mensagensService.add(`Produtos Service: fetched produto id ${id}`)
+    return of(PRODUTOS.find(produto => produto.id === id))
   }
 }

@@ -1,4 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { ProdutosService } from '../produtos/produtos.service';
 import { Produto } from '../produto';
 
 @Component({
@@ -8,11 +12,27 @@ import { Produto } from '../produto';
 })
 export class ProdutoDetalheComponent implements OnInit {
 
-  @Input() produto: Produto;
+  produto: Produto;
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private produtosService: ProdutosService,
+    private location: Location
+  ) { }
 
   ngOnInit(): void {
+    this.getProduto();
   }
+  
+  getProduto(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.produtosService.getProdutos(id)
+        .subscribe(produto => this.produto = produto);
+  }
+  goBack(): void {
+    this.location.back();
+  }
+  
+};
 
-}
+

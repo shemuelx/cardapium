@@ -1,11 +1,7 @@
 
-<div *ngIf="produto">
-
-  <h2>{{produto.name | uppercase}} Detalhes</h2>
-  <div><span>Id: </span>{{ produto.id }}</div>
-  <div><span>Data Validade </span>{{ produto.datavalidade }}</div>
-  
-  <div>
+<div *ngIf="produto">  
+  <div class="form">
+    <h2>{{produto.nome | uppercase}} Detalhes</h2>    
     <label>
       Nome    
       <input [(ngModel)]="produto.nome" placeholder="nome">
@@ -27,6 +23,6 @@
       <input [(ngModel)]="produto.dataentrada" placeholder="01/12/2020">    
     </label>
   </div>
-
+  <button (click)="goBack()">Voltar</button>
 </div>
 

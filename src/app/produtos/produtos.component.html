@@ -1,14 +1,10 @@
-
 <!-- Formulario dos produtos  -->
-<h2>Produtos</h2>
 
 <ul class="produtos">
-  <li *ngFor="let produto of produtos"  
-    [class.selected]="produto === selectedProduto"
-    (click)="onSelect(produto)">    
-    <span class="botao">Id: {{ produto.id }}</span>
-    <span class="botao">Nome: {{ produto.nome }}</span>    
+  <li *ngFor="let produto of produtos">
+    <a routerLink="/produto/{{produto.id}}">
+      <span class="id">ID: {{ produto.id }}</span> 
+      <span class="nome">{{ produto.nome | titlecase }}</span>
+    </a>
   </li>
 </ul>
-
-<app-produto-detalhe [produto]="selectedProduto"></app-produto-detalhe>
