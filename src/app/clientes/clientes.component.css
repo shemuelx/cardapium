@@ -1,4 +1,11 @@
-
+.clientes {
+  margin-top: .5em;
+  height: 40em; 
+  background-size: cover; 
+  width:auto;
+  background-image:url('../../assets/images/clientes.jpg');
+  background-position: 50% 50%;
+}
 .container {
   width: 100%;
   background-color: #edf2fb;

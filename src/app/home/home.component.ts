@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
 
   getProdutos(): void {    
     this.produtoService.getProdutos()
-        .subscribe(produtos => this.produtos = produtos.slice(1, 8));
+        .subscribe(produtos => this.produtos = produtos.slice(1, 4));
   }  
 
 }

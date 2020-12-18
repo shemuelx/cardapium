@@ -1,17 +1,12 @@
 <!-- Formulario dos produtos  -->
-<div class="form">
-  <span class="nome">Nome do Produto: </span> <input #produtoNome />  
-  <button (click)="add(produtoNome.value)">  <!--produtoNome.value='' -->
-    Adicionar
-  </button>
-</div>
+<div class="produtos"></div>
+<app-produto-detalhe></app-produto-detalhe>
 
-<ul class="produtos">
+<!-- <button (click)="add(produto)">Adicionar</button> -->
+<!-- <button (click)="delete(produto)">Apagar</button> -->
+
+<ul class="container">
   <li *ngFor="let produto of produtos">
-    <a routerLink="/produto/{{produto.id}}">
-      <span class="id">ID: {{ produto.id }}</span> 
-      <span class="nome">{{ produto.nome | titlecase }}</span>
-      <button class="delete" (click)="delete(produto)">Apagar</button>
-    </a>
+    <a routerLink="/produto/{{produto.id}}">{{ produto.nome | titlecase }}</a>
   </li>
 </ul>
