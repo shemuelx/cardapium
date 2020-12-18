@@ -16,7 +16,7 @@ export class ProdutoDetalheComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private produtosService: ProdutosService,
+    private produtoService: ProdutosService,
     private location: Location
   ) { }
 
@@ -26,14 +26,14 @@ export class ProdutoDetalheComponent implements OnInit {
   
   getProduto(): void {
     const id = +this.route.snapshot.paramMap.get('id');
-    this.produtosService.getProduto(id)
+    this.produtoService.getProduto(id)
         .subscribe(produto => this.produto = produto);
   }
   goBack(): void {
     this.location.back();
   }
   save(): void {
-    this.produtosService.updateProduto(this.produto)
+    this.produtoService.updateProduto(this.produto)
       .subscribe(() => this.goBack());
   }
 

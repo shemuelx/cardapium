@@ -1,7 +1,7 @@
 
-<div *ngIf="produto">  
+<div *ngIf="produto" class="container">  
   <div class="form">
-    <h2>{{produto.nome | uppercase}} Detalhes</h2>    
+    <h2>Detalhes {{produto.nome | uppercase}}</h2>    
     <label>
       Nome    
       <input [(ngModel)]="produto.nome" placeholder="nome">
@@ -22,8 +22,9 @@
       Data Entrada    
       <input [(ngModel)]="produto.dataentrada" placeholder="01/12/2020">    
     </label>
+    <button (click)="save()">Enviar</button>
+    <button (click)="goBack()">Voltar</button>
   </div>
-  <button (click)="goBack()">Voltar</button>
-  <button (click)="save()">Adicionar</button>
+  
 </div>
 

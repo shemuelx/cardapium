@@ -1,37 +1,42 @@
-h1 {
-  font-size: 5em;
-  text-align: center;
-  margin-top: 2em;
+.cont{
+  margin-top: .5em;
+  height: 40em; 
+  background-size: cover; 
+  width:auto;
+  background-image:url('../../assets/images/cardapium.png');
+  background-position: 50% 50%;
 }
+.text {  
+  padding: 4em 0;  
+  background-color: #ffffff;
+}
+
 h3 {
-  font-size: 2em;
+  font-size: 4em;
   font-weight: lighter;
   text-align: center;
-  margin-top: 3em;
+  margin-top: .5em;
 }
 .melhores {
-  margin: .5em auto;
-  width: 40em;
+  margin: 6em auto;
+  width: 90%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;  
 }
 
-a {
-  padding: 5px 10px;
-  text-decoration: none;   
-  background-color: #eee;
+a {  
+  text-decoration: none;     
   border-radius: 4px;
-  font-size: 1em;
+  font-size: 2em;
   text-align: center;
 }
 a:visited, a:link {
-  color: #334953;
+  color: #eb5e28;
 }
 a:hover {
-  color: #039be5;
-  background-color: #cfd8dc;
+  color: #039be5; 
 }
 a.active {
   color: #039be5;

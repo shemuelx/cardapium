@@ -1,7 +1,7 @@
 
 <!-- Formulario dos clientes  -->
-
-<form [formGroup]="clientesForm" (ngSubmit)="onSubmit()">
+<div class="container">
+  <form [formGroup]="clientesForm" (ngSubmit)="onSubmit()">
     
     <label>
       Nome
@@ -29,10 +29,11 @@
     </label>
 
 
-    <button type="submit">Confirma</button>    
+    <button type="submit">Enviar</button>    
 
   </form>
 
   <p>
-    Form Value: {{ clientesForm.value | json }}
+    Cliente: {{ clientesForm.value | json }}
   </p>
+</div>

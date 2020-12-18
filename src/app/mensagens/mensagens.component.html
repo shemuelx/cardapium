@@ -2,7 +2,7 @@
   <span>Mensagens do sistema</span>
   <button class="clear"
           (click)="mensagensService.clear()">Limpar</button>
-  <div *ngFor='let mensagen of mensagensService.mensagens'>
+  <div *ngFor='let mensagen of mensagensService.mensagens'><br>
     <span class="mensagens">{{ mensagen }}</span>
   </div>
 </div>

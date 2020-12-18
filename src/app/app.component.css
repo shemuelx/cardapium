@@ -1,38 +1,41 @@
+
 nav {
-  margin-top: 20px;
+  padding: 1em 0;  
+  margin-top: 2em;
+  margin-bottom: 2em;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;  
+  justify-content: space-around;
+  background-color: #FFFFFF;  
 }
 nav a {
+  font-size: 3em;
   padding: 5px 10px;
   text-decoration: none; 
-  display: inline-block;
-  background-color: #eee;
+  display: inline-block;  
   border-radius: 4px;
 }
 nav a:visited, a:link {
   color: #334953;
 }
 nav a:hover {
-  color: #039be5;
-  background-color: #cfd8dc;
+  color: #039be5; 
 }
 nav a.active {
   color: #039be5;
 }
-
-
+.container {
+  background: url(/src/assets/images/5.png);
+}
 .footer {
-  margin-top: 20px;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  margin-top: 1em;
+  margin-bottom: 2em;
   width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around; 
-}
-
-a {
-  font-size: 2em;
-  text-align: center;
+  background-color: #e36414;
 }

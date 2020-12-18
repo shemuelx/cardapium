@@ -1,14 +1,15 @@
 
 span {
   color: crimson;
-  font-family: Arial;
-  font-size: 1.5em;
+  font-family: inherit;
+  font-size: 2em;
   font-weight: lighter;
+  margin-left: 2.5em;
   margin-right: 2em;
 }
 button.clear {
   display: inline-flex;
-  font-family: Arial;
+  font-family: inherit;
   font-size: 1.5em;
   color: #333;
   background-color: #eee;  
@@ -21,10 +22,14 @@ button:hover {
   background-color: #cfd8dc;
 }
 .container {
-  width: 60em;
-  margin: 5em auto;  
+  width: 100%;
+  margin: 2em auto; 
+  padding-top: 1em;
+  padding-bottom: 5em; 
+  background-color: #fdfffc;
 }
 .mensagens {
-  font-size: 1.2em;
+  margin-left: 3em;
+  font-size: 1.6em;  
   color: black;
 }
